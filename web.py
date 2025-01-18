@@ -9,8 +9,8 @@ def add_todo():
     todos.append(new_todo)
     functions.write_json_todos(todos)
 
-st.title("My todo App")
-st.subheader("tasks for the day:")
+st.title("Lidl shopping list for Constant")
+st.subheader("cinnamon roll ingredients missing:")
 ##st.write("some more text")
 
 for index, todo in enumerate(todos):
@@ -21,7 +21,5 @@ for index, todo in enumerate(todos):
         del st.session_state[todo]
         st.rerun()
 
-st.text_input(label="add a new todo", placeholder= "Add a new todo",
+st.text_input(label="add a new ingredient", placeholder= "Add a new todo",
                on_change=add_todo, key='new_todo')
-
-st.session_state
